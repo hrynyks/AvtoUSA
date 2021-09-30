@@ -1,0 +1,25 @@
+.footer {
+    background: #21062A;
+    padding: 50px 0;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+
+    &__social {
+        display: flex;
+        column-gap: 20px;
+    }
+
+    &__politycal {
+        color: $light-color;
+    }
+}

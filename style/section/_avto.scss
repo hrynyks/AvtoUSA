@@ -1,0 +1,50 @@
+.avto {
+    padding-bottom: 100px;
+
+    &__title {
+        font-size: toRem(36);
+        color: $main-color;
+        margin-bottom: 50px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: $main-color;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 370px;
+
+            @include a (tablet) {
+                display: none;
+            }
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 390px);
+        column-gap: 14px;
+
+        @include a (laptop) {
+            grid-template-columns: minmax(300px, 390px);
+            justify-content: center;
+            row-gap: 14px;
+        }
+    }
+
+    &__item {
+        padding: 10px;
+        border: 1px solid #C4C4C4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        &:hover {
+            background-color: $accent-color;
+            color: $light-color;
+        }
+    }
+}
